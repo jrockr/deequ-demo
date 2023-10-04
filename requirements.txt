@@ -1,0 +1,2 @@
+pydeequ
+pyspark==3.3.0
