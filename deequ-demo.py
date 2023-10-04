@@ -31,6 +31,8 @@ analysisResult = AnalysisRunner(spark) \
     .addAnalyzer(Completeness("Cabin")) \
     .addAnalyzer(Distinctness("PassengerId")) \
     .addAnalyzer(Mean("Age")) \
+    .addAnalyzer(Compliance("Sex","Sex == 'male' or Sex == 'female'")) \
+    .addAnalyzer(Completeness("Sex")) \
     .run()
 
 # Run the data quality analysis
